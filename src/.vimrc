@@ -327,5 +327,5 @@ function Do_make()
     execute "silent make"
     execute "copen"
 endfunction
-so /home/chenming-xy/.vim/proto.vim
+so ~/.vim/proto.vim
 
