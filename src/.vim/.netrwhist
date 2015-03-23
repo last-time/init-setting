@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/chenming-xy/sync/qdev/CloudSrv/trunk/nginx/token/etc/etc.latest/conf_awssg'
+let g:netrw_dirhist_2='/home/chenming-xy/sync/qdev/CloudSrv/trunk/nginx/kill/cloudkill/tools/private_cloud/client/src'
+let g:netrw_dirhist_3='/home/chenming-xy/sync/qdev/CloudSrv/trunk/cloudcom/src/safeutil/src/proto'
+let g:netrw_dirhist_4='/home/chenming-xy/sync/qdev/CloudSrv/trunk/nginx/token'
+let g:netrw_dirhist_5='/home/chenming-xy/sync/qdev/CloudSrv/trunk/nginx/token/etc'

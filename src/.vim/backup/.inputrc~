@@ -1,0 +1,25 @@
+#C-r C-j
+"\C-j":reverse-search-history
+# C-o
+"\C-o":forward-search-history
+
+# do not show hidden files in the list
+set match-hidden-files off
+
+# auto complete ignoring case
+set show-all-if-ambiguous on
+set completion-ignore-case on
+"\ep":history-search-backward
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+
+# 增量搜索
+"\C-p":history-search-backward
+# 增量搜索
+"\C-n":history-search-forward
+
+# esc-N 向左删除一个单词 
+"\en":backward-kill-word
+
+# esc-M 向右删除一个单词
+"\em":kill-word 

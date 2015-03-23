@@ -1,0 +1,17 @@
+set match-hidden-files off 
+ 
+# auto complete ignoring case
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+ 
+"\C-j":backward-kill-word
+"\C-o":kill-word
+ 
+"\C-u":unix-line-discard
+"\C-k":kill-line
+
