@@ -12,12 +12,16 @@ BACKUP_PATH="${BASE_PATH}"/backup
 function do_backup ()
 {
     cd "${HOME_PATH}"
-    "${CP}" .bachrc .bash_logout .bash_profile "${BACKUP_PATH}"/
-    "${CP}" .inputrc /etc/inputrc "${BACKUP_PATH}"/
-    "${CP}" .vimrc .vim "${BACKUP_PATH}"/
-    if [ -d bash.d ] ; then
-        "${CP}" bash.d "${BACKUP_PATH}"/
-    fi
+    #"${CP}" /etc/inputrc "${BACKUP_PATH}/"
+    #"${CP}" /etc/vimrc "${BACKUP_PATH}/"
+
+    FILES_HOME=".bashrc .bash_logout .bash_profile .inputrc .vimrc .vim .bash.d .dir_colors"
+    for f in ${FILES_HOME}
+    do
+        if [ -f "${f}" ] ; then
+            "${CP}" "${f}" "${BACKUP_PATH}/"
+        fi
+    done
 }
 
 if [ -e "${BACKUP_PATH}/${DONE_FILE}" ] ; then
@@ -30,14 +34,18 @@ SRC_PATH="${BASE_PATH}"/src
 function do_install ()
 {
     cd "${SRC_PATH}"
-    "${CP}" bashrc_ "${HOME_PATH}/.bashrc"
-    "${CP}" bash_logout_ "${HOME_PATH}/.bash_logout"
-    "${CP}" bash_profile_ "${HOME_PATH}/.bash_profile"
-    "${CP}" inputrc_ "${HOME_PATH}/.inputrc"
-    "${CP}" inputrc /etc/inputrc
-    "${CP}" bash.d "${HOME_PATH}/"
-    "${CP}" vim_ "${HOME_PATH}/.vim"
-    "${CP}" vimrc_ "${HOME_PATH}/.vimrc"
+    #"${CP}" inputrc /etc/inputrc
+    #"${CP}" vimrc /etc/inputrc
+
+    # $HOME 目录下的文件
+    FILES_HOME=".bashrc .bash_logout .bash_profile .inputrc .vimrc .vim .bash.d .dir_colors"
+    for f in ${FILES_HOME}
+    do
+        if [ -f "${f}" ] ; then
+            "${CP}" "${f}" "${HOME_PATH}/"
+        fi
+    done
 }
+
 do_install
 
